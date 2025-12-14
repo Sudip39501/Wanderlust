@@ -1,0 +1,27 @@
+last doubts clear such as ->
+
+1. passport.authenticate("local", {
+    failureRedirect: '/login' ,
+    failureFlash: true
+}) 
+
+this middleware acutlly  do this 
+let { username , email , password} = req.body;
+    req.user = username;
+    const newUser = new User({email , username});
+    const registerUser = await User.register(newUser,password);
+    req.login(registerUser ,(err)=>{
+        if(err){
+            next(err);
+        }
+    })
+
+2.reviews:[{
+        type: Schema.Types.ObjectId,
+        ref:"Review" // use when we have to populate this thing (always same name as model name )
+    }],
+
+
+pending ->  1. Style tag web toolkit and web scrollber learn.
+            2. form update add category  make  sure that should be connected to the Listing schema
+         

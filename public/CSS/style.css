@@ -19,6 +19,7 @@ body{
 
 /* navbar */
 .navbar{
+    width: 100vw;
     height: 5rem;
     background-color: white;
 }
@@ -64,6 +65,7 @@ body{
      margin-right: 1rem;
    
 }
+
 /* index page */
 .listing-card{
     border:none !important;
@@ -84,11 +86,41 @@ body{
     opacity: 0.2;
     background-color: white;
 }
-/* new page */
+/* filter in indexpage */
+
+/* .fiters{
+    display: flex;
+    justify-content: center;
+   }
+   .filter{
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    margin-right: 2rem;
+    text-align: center;
+    opacity: 0.7;
+   }
+   .filter:hover{
+    opacity: 1;
+    cursor: pointer;
+   }
+   .form-switch {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    margin-left: 2rem;
+   }
+   .tax-info{
+    
+    font-size: 0.8rem;
+    color: grey;
+    display: none;
+   } */
+
+   /* new page */
 .add-btn{
     background-color:#FF385C !important;
     border: none !important;
 }
+
 /* edit page */
 .edit-btn{
     background-color:#FF385C !important;

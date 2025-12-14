@@ -15,9 +15,14 @@ const listingSchema = new mongoose.Schema({
     price:Number,
     location:String,
     country:String,
+    Category:{
+        type:String,
+        enum:["Trending", "Rooms", "Iconic City", "Mountains", "Castles", "Swimming Pool", "Camping", "Farm", "Arctic"],
+
+    },
     reviews:[{
         type: Schema.Types.ObjectId,
-        ref:"Review" // use when we have to populate this thing
+        ref:"Review" // use when we have to populate this thing (always same name as model name )
     }],
     owner: {
         type: Schema.Types.ObjectId,

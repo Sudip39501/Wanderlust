@@ -1,10 +1,6 @@
 <% layout('./layouts/boilerplate') -%>
+<!-- <style>
 
-   <style>
-   .fiters{
-    display: flex;
-    justify-content: center;
-   }
    .filter{
     margin-top: 2rem;
     margin-bottom: 2rem;
@@ -27,9 +23,125 @@
     color: grey;
     display: none;
    }
-   </style>
+/* Outer container: holds filters and switch in one row */
+.filters-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  /* padding: 10px; */
+  /* overflow: hidden; */
+  /* border-bottom: 1px solid #ddd; */
+}
 
-   <div class="fiters">
+/* Filters row — scrollable horizontally */
+.fiters {
+  width: 65vw;
+  /* display: flex; */
+  /* gap: 1rem; */
+  overflow-x: auto;
+  overflow-y: hidden;
+  white-space: nowrap; 
+  /* height: 100px;
+  width: 150px; */
+    
+  /* flex-grow: 1; */
+  scroll-behavior: smooth;
+
+}
+
+/* Individual filter item */
+.filter {
+  /* background-color: pink; */
+  /* flex: 0 0 auto; */
+  display: inline-block;
+  height: 100px;
+  width: 150px;
+  /* flex-direction: column; */
+  /* align-items: center; */
+  /* text-align: center; */
+  /* cursor: pointer; */
+  /* min-width: 70px; */
+  transition: transform 0.2s ease;
+}
+
+.filter:hover {
+  transform: scale(1.05);
+}
+
+.filter i {
+  font-size: 20px;
+  margin-bottom: 5px;
+}
+
+/* Toggle switch stays on right */
+.form-check {
+  flex-shrink: 0;
+  white-space: nowrap;
+}
+
+/* Optional scrollbar style */
+/* .fiters::-webkit-scrollbar {
+  height: 6px;
+  display: none; /* Chrome, Safari 
+
+} */
+/* .fiters::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 3px;
+} */
+
+/* Small screen adjustments */
+/* @media (max-width: 768px) {
+  .filter p {
+    font-size: 0.8rem;
+  }
+  .form-check-label {
+    font-size: 0.85rem;
+  }
+} */
+
+</style> -->
+<style>
+  .filters{
+ width: 65vw;
+
+  /* background-color: blueviolet; */
+  white-space: nowrap;
+
+  /* don't understand that */
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+.filter {
+  display: inline-block;
+  text-align: center;
+    opacity: 0.7;
+  /* background-color: bisque; */
+  
+  margin: 10px;
+}
+ .filter:hover{
+    opacity: 1;
+    cursor: pointer;
+    transform: scale(1.05);
+
+   }
+.filters-container{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+.form-switch{
+    max-width: 30vh;
+}
+</style>
+ <!-- this is the above style tag i have to study  -->
+<div class="filters-container">
+   <div class="filters">
     <div class="filter">
         <i class="fa-solid fa-fire"></i>
         <p>Trending</p>
@@ -66,13 +178,13 @@
         <i class="fa-solid fa-snowflake"></i>
         <p>Arctic</p>
     </div>
-   
+</div>
 <div class="form-check form-switch form-check-reverse ms-auto ">
   <input class="form-check-input" type="checkbox" id="switchCheckReverse">
   <label class="form-check-label" for="switchCheckReverse">Display Total after <b>Taxes</b></label>
 </div>
-</div> 
-   </div>
+</div>
+  
 
 <div class="container ">
     <div class="row row-cols-lg-3 row-cols-md-2 row-cols-sm-1 " >
