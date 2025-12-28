@@ -113,16 +113,19 @@
   overflow-x: auto;
   overflow-y: hidden;
 }
-.filter {
+.filter,.filter a{
+  color: gray;
+  text-decoration: none;
   display: inline-block;
   text-align: center;
-    opacity: 0.7;
+  
   /* background-color: bisque; */
   
   margin: 10px;
 }
- .filter:hover{
-    opacity: 1;
+ .filter:hover a{
+    color: black;
+    
     cursor: pointer;
     transform: scale(1.05);
 
@@ -138,45 +141,78 @@
 .form-switch{
     max-width: 30vh;
 }
+/* .filter a{
+  display: inline-block;
+  opacity: 0.7;
+  color: black;
+  text-decoration: none;
+} */
 </style>
  <!-- this is the above style tag i have to study  -->
 <div class="filters-container">
    <div class="filters">
     <div class="filter">
+      <a href="/listings/category/Trending">
+
         <i class="fa-solid fa-fire"></i>
         <p>Trending</p>
+      </a>
     </div>
     <div class="filter">
-      <i class="fa-solid fa-bed"></i>
-      <p>Rooms</p>
+      <a href="/listings/category/Rooms">
+        <i class="fa-solid fa-bed"></i>
+        <p>Rooms</p>
+
+      </a>
     </div>
     <div class="filter">
-<i class="fa-solid fa-mountain-city"></i>      
-  <p>Iconic City</p>
+      <a href="/listings/category/Iconic city">
+        <i class="fa-solid fa-mountain-city"></i>      
+        <p>Iconic City</p> 
+
+      </a>
     </div>
     <div class="filter">
+      <a href="/listings/category/Mountains">
         <i class="fa-solid fa-mountain"></i>
         <p>Mountains</p>
+
+      </a>
     </div>
     <div class="filter">
+      <a href="/listings/category/Castles">
+
         <i class="fa-brands fa-fort-awesome"></i>
         <p>Castles</p>
+      </a>
     </div>
     <div class="filter">
+      <a href="/listings/category/Swimming Pool">
+
         <i class="fa-solid fa-person-swimming"></i>
         <p>Swimming Pool</p>
+      </a>
     </div>
     <div class="filter">
-<i class="fa-solid fa-campground"></i>       
- <p>Camping</p>
+      <a href="/listings/category/Camping">
+
+        <i class="fa-solid fa-campground"></i>       
+         <p>Camping</p>
+      </a>
     </div>
     <div class="filter">
+      <a href="/listings/category/Farm">
+
         <i class="fa-solid fa-cow"></i>
         <p>Farm</p>
+      </a>
     </div>
     <div class="filter">
+      <a href="/listings/category/Artic">
+
         <i class="fa-solid fa-snowflake"></i>
         <p>Arctic</p>
+      </a>
     </div>
 </div>
 <div class="form-check form-switch form-check-reverse ms-auto ">

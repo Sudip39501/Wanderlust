@@ -17,7 +17,8 @@ router.route("/")
 ,validateListing
 ,listingController.createListing);
 
-
+//filter
+router.get("/category/:category",listingController.filter)
 
 //new route
 router.get("/new",isLogin,listingController.newFrom);

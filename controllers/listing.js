@@ -7,6 +7,11 @@ module.exports.index = async(req,res)=>
    res.render("listings/index.ejs" ,{ allListing })
 };
 
+module.exports.filter = async(req,res) =>{
+    let {category}= req.params;
+    const allListing = await Listing.find({category: category})
+    res.render("listings/index.ejs",{allListing});
+}
 module.exports.newFrom = (req,res)=>{
     
     res.render("listings/new.ejs");
